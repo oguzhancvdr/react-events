@@ -15,7 +15,6 @@ const ClickEvents = () => {
           <input
             type="text"
             placeholder="name"
-
           />
         </div>
         <div>
@@ -59,15 +58,6 @@ const ClickEvents = () => {
           submit
         </button>
       </form>
-      {/* <div>
-        <a
-          style={{ position: "fixed", bottom: "0", marginBottom: "20px" }}
-          onClick={handleClick}
-          href="www.example.com"
-        >
-          Example
-        </a>
-      </div> */}
     </div>
   );
 };
