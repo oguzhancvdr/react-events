@@ -1,7 +1,7 @@
 
 import "./styles.css";
 
-const ClickEvents = () => {
+const Form = () => {
   
   return (
     <div style={{ height: "110vh" }}>
@@ -62,4 +62,4 @@ const ClickEvents = () => {
   );
 };
 
-export default ClickEvents;
+export default Form;
