@@ -16,8 +16,9 @@ const MouseEvents = () => {
   }
 
   // doubleClick event
-  const handleDoubleClick = e => console.log("event type : ", e.target.id);
-
+  function handleDoubleClick(e){
+     console.log("event type : ", e.target.id);
+  }
   // mouseMove event
   const handleMouseMove = (e) => {
     setCoordX(e.nativeEvent.offsetX);
