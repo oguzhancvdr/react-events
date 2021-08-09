@@ -1,6 +1,6 @@
 // import EventBind from './components/eventBinding/EventBind'
-import MouseEvents from './components/mouseEvents/MouseEvents'
-// import KeyboardEvents from './components/keyboardEvents/KeyboardEvents'
+// import MouseEvents from './components/mouseEvents/MouseEvents'
+import KeyboardEvents from './components/keyboardEvents/KeyboardEvents'
 // import Form from './components/form/Form'
 import './App.css'
 
@@ -9,8 +9,8 @@ const App = () => {
         <div className="App">
             {/* <h1>Events in React</h1> */}
             {/* <EventBind /> */}
-            <MouseEvents />
-            {/* <KeyboardEvents /> */}
+            {/* <MouseEvents /> */}
+            <KeyboardEvents />
             {/* <Form /> */}
         </div>
     )

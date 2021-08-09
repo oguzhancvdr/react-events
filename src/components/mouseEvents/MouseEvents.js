@@ -22,8 +22,8 @@ const MouseEvents = () => {
 
   // click
 
-  const handleClick = (event, name) => {
-    console.log({ eventType: event.type, id: event.target.id, name:"Hi " + name });
+  const handleClick = (e, name) => {
+    console.log({name:"Hi " + name, target: e.target });
   };
 
 
