@@ -1,23 +1,64 @@
 import "./styles.css";
+import { useState } from "react";
+
+import { setInput } from '../../helpers/inputHelpers'
 
 const Form = () => {
+const [ name, setName ] = useState("");
+const [ email, setEmail ] = useState("");
+const [ password, setPassword ] = useState("");
+const [country, setCountry ] = useState("");
+
+console.log({name, email, password, country});
+
+//name
+  // const handleNameField = e => setName(e.target.value);
+
+//email
+// const handleEmailField = e => setEmail(e.target.value);
+
+// password
+// const handlePasswordField = e => setPassword(e.target.value);
+
+// country
+// const handleCountryField = e => setCountry(e.target.value);
+
+
+// submit
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  alert(`
+  username: ${name}
+  email: ${email}
+  password: ${password}
+  country: ${country}
+  `)
+  setName("");
+  setEmail("");
+  setPassword("");
+  setCountry("");
+}
 
   return (
     <div style={{ height: "110vh" }}>
-      <form >
+      <form onSubmit={handleSubmit}>
         <div>
-          <p>name here</p>
+          <p>{name}</p>
           <label>
             <strong>Username:</strong>{" "}
           </label>
           <br />
           <input
             type="text"
+            name="name"
             placeholder="name"
+            value={name}
+            onChange={setInput(setName)}
           />
         </div>
         <div>
-          <p>email here</p>
+          <p>{email}</p>
           <label>
             <strong>E-mail:</strong>{" "}
           </label>
@@ -25,10 +66,12 @@ const Form = () => {
           <input
             type="email"
             placeholder="email"
+            onChange={setInput(setEmail)}
+            value={email}
           />
         </div>
         <div>
-          <p>password here</p>
+          <p>{password}</p>
           <label>
             <strong>Password: </strong>
           </label>
@@ -36,14 +79,18 @@ const Form = () => {
           <input
             type="password"
             placeholder="pass"
+            onChange={setInput(setPassword)}
+            value={password}
           />
         </div>
         <div style={{ margin: "10px auto" }}>
-          <p>country here</p>
+          <p>{country}</p>
           <label>
             <strong>Country: </strong>
           </label>
           <select
+            value={country}
+            onChange={setInput(setCountry)}
             style={{ marginTop: "10px", width: "100px", padding: "10px" }}
           >
             <option value="">Country</option>
